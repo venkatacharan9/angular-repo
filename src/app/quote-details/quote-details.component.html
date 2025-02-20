@@ -1,0 +1,41 @@
+<div class="quote-section">
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search by author" />
+    <button (click)="searchQuote()">Search</button>
+  </div>
+
+  <div class="quote-container">
+    <div *ngFor="let quote of quotes">
+      <div *ngIf="quote?.image" class="quote-image">
+        <img [src]="quote?.image" alt="Quote Image">
+      </div>
+
+      <div class="quote-text">
+        <blockquote>{{ quote?.quote || quote?.q }}</blockquote>
+      </div>
+
+      <div class="quote-author">
+        <p *ngIf="quote?.author" class="author">- {{ quote?.author }}</p>
+        <p *ngIf="quote?.character" class="author">- {{ quote?.character }}</p>
+        <p *ngIf="quote?.a" class="author">- {{ quote?.a }}</p>
+      </div>
+
+      <div class="heart-button" (click)="heartQuote(quote)">❤️</div>
+    </div>
+
+    <div class="next-quote-button">
+      <button (click)="getQuotes()">Next Quote</button>
+    </div>
+  </div>
+
+  <div *ngIf="hallOfFameQuotes.length" class="hall-of-fame-container">
+    <h3>Hall of Fame</h3>
+    <div class="hall-of-fame-slider">
+      <div class="slider" [ngStyle]="{'transform': 'translateX(' + (-currentIndex * 100) + '%)'}">
+        <div *ngFor="let hallQuote of hallOfFameQuotes" class="slide">
+          <blockquote>{{ hallQuote?.quoteText }}</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

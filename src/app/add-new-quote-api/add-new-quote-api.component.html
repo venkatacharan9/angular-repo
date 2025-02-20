@@ -1,0 +1,25 @@
+<div class="full-background">
+  <div class="main-container">
+    <div class="sidebar">
+    </div>
+    <div class="content">
+      <div class="quote-form-container">
+        <form (ngSubmit)="onSubmit()">
+          <div>
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" [(ngModel)]="quoteModel.name" name="name" required />
+          </div>
+          <div>
+            <label for="apiUrl">API URL <span class="required">*</span></label>
+            <input type="text" id="apiUrl" [(ngModel)]="quoteModel.apiUrl" name="apiUrl" required />
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="active" [(ngModel)]="quoteModel.active" name="active" />
+            <label for="active">Active</label>
+          </div>
+          <button type="submit" [disabled]="!quoteModel.name || !quoteModel.apiUrl">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

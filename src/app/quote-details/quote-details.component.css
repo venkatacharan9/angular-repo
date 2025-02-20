@@ -1,0 +1,160 @@
+.quote-section {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 250px;
+}
+
+.search-container button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+.quote-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote-image {
+  max-width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-image img {
+  max-width: 15%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+.quote-author p {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.next-quote-button button {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.next-quote-button button:hover {
+  background-color: #e6b800;
+}
+
+.hall-of-fame-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hall-of-fame-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.quote-container {
+  position: relative;
+}
+
+.heart-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  color: #ff4081;
+  transition: transform 0.2s ease;
+}
+
+.heart-button:hover {
+  transform: scale(1.2);
+  color: #e91e63;
+}
+
+.heart-button:active {
+  transform: scale(1);
+}
