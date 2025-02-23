@@ -13,6 +13,18 @@
             <label for="apiUrl">API URL <span class="required">*</span></label>
             <input type="text" id="apiUrl" [(ngModel)]="quoteModel.apiUrl" name="apiUrl" required />
           </div>
+          <div>
+            <label for="apiUrl">HTTP METHOD <span class="required">*</span></label>
+            <input type="text" id="httpMethod" [(ngModel)]="quoteModel.httpMethod" name="httpMethod" required />
+          </div>
+          <div>
+            <label for="apiUrl">HEADER KEY <span class="required">*</span></label>
+            <input type="text" id="headersKey" [(ngModel)]="quoteModel.headersKey" name="headersKey" required />
+          </div>
+          <div>
+            <label for="apiUrl">HEADER VALUE <span class="required">*</span></label>
+            <input type="text" id="headersValue" [(ngModel)]="quoteModel.headersValue" name="headersValue" required />
+          </div>
           <div class="checkbox-container">
             <input type="checkbox" id="active" [(ngModel)]="quoteModel.active" name="active" />
             <label for="active">Active</label>

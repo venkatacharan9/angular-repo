@@ -12,11 +12,14 @@ export class QuoteService {
   private baseUrl = "http://localhost:8080/api/quotes/";
 
   constructor(private httpClient : HttpClient) { }
+  
 
   postQuoteData(data: AddQuote): Observable<any> {
-    return this.httpClient.post(`${this.baseUrl}add-source`, data);
-  }
+    const headersMap = data.getHeadersMap();
+    const requestData = { ...data, headers: headersMap }; 
 
+    return this.httpClient.post(`${this.baseUrl}add-source`, requestData);
+  }
   getQuotes():Observable<Quote[]> {
     console.log(`${this.baseUrl}random`);
     return this.httpClient.get<Quote[]>(`${this.baseUrl}random`)

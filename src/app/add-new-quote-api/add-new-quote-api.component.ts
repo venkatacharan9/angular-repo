@@ -12,22 +12,18 @@ import { CommonModule } from '@angular/common';
 })
 export class AddNewQuoteAPIComponent {
 
-  quoteModel: AddQuote = new AddQuote('', '', false);
-
+  quoteModel: AddQuote = new AddQuote('', '', false,'');
   constructor(private quoteService: QuoteService) {}
 
-  onSubmit() {
+   onSubmit() {
     this.quoteService.postQuoteData(this.quoteModel).subscribe(
       response => {
         console.log('Quote data posted successfully:', response);
-        this.quoteModel = new AddQuote('', '', false); 
-        setTimeout(() => {
-        }, 3000);
+        this.quoteModel = new AddQuote('', '', false, '');
       },
       error => {
         console.error('Error posting data:', error);
       }
     );
   }
-
 }
